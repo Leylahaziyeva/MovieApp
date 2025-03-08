@@ -21,7 +21,7 @@ internal class Program
 
         while (true)
         {
-            Console.WriteLine("Commands:");
+            Console.WriteLine(" \nCommands:");
             if (user.Type == UserType.Admin)
             {
                 Console.WriteLine("1. Add movie");
@@ -29,6 +29,7 @@ internal class Program
                 Console.WriteLine("3. Add genre");
                 Console.WriteLine("4. Remove genre");
                 Console.WriteLine("5. Most viewed");
+                Console.WriteLine("6. Print all movies");
             }
             else
             {
@@ -37,8 +38,8 @@ internal class Program
                 Console.WriteLine("3. Add to watchlist");
                 Console.WriteLine("4. Search movie");
             }
-            Console.WriteLine("6. Logout");
-            Console.WriteLine("7. Exit");
+            Console.WriteLine(" Logout");
+            Console.WriteLine(" Exit");
 
             Console.Write("Enter command: ");
             string command = Console.ReadLine().ToLower();
@@ -107,6 +108,10 @@ internal class Program
         else if (command == "most viewed")
         {
             movieSystem.MostViewed();
+        }
+        else if (command == "print all movies") 
+        {
+            movieSystem.PrintMovies();
         }
     }
 

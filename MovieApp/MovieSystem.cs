@@ -125,4 +125,23 @@ public class MovieSystem
         }
     }
 
+    public void PrintMovies()
+    {
+        if (movieCount == 0)
+        {
+            Console.WriteLine("No movies available.");
+            return;
+        }
+
+        Console.WriteLine("List of Movies:");
+        for (int i = 0; i < movieCount; i++)
+        {
+            if (movies[i] != null)
+            {
+               Console.WriteLine($"Title: {movies[i].Title,-20} Genre: {movies[i].Genre,-20} Views: {movies[i].NumberOfViews,-10}");
+            }
+            
+        }
+    }
+
 }
